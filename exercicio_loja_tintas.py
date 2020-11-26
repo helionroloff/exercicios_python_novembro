@@ -27,6 +27,7 @@ else:
 valor = latas * 80
 
 print(f'''
+ORÇAMENTO PARA LATAS DE 10L
 METRAGEM: {metragem} mt²
 LITROS NECESSÁRIOS: {litros_necessários:.2f} litros
 LATAS: {int(latas)} un
@@ -35,16 +36,20 @@ VALOR TOTAL: R$ {valor:.2f}
 
 
 
-#cálculo para latas necessárias e valor de custo utilizando latas de 18 litros
+#cálculo para latas necessárias e valor de custo utilizando latas de 3.6 litros
 litros_necessários = metragem / 6
+
 latas = (litros_necessários // 3.6) + 1
+
 if litros_necessários % 3.6 == 0:
     latas = latas
 valor = latas * 25
 
 print(f'''
+ORÇAMENTO PARA LATAS DE 3.6L
 METRAGEM: {metragem} mt²
 LITROS NECESSÁRIOS: {litros_necessários:.2f} litros
 LATAS: {int(latas)} un
 VALOR TOTAL: R$ {valor:.2f}
 ''')
+
