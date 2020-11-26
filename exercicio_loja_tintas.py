@@ -62,14 +62,12 @@ galao_3_6 = metragem_restante // 21.6
 if metragem_restante % 21.6 != 0:
     galao_3_6 = galao_3_6 + 1
 
-valor_misturado = (latas_18 * 80)+(galao_3_6 * 25)
-valor_com_folga = valor_misturado + (valor_misturado * 0.10)
+
 
 print(f'''
 METRAGEM: {metragem} mt²
 QUANTIDADE DE LATAS DE 18L: {latas_18} un
 QUANTIDADE DE LATAS DE 3.6L: {galao_3_6} un
-VALOR SEM 10% DE FOLGA: {valor_misturado} R$
-VALOR COM FOLGA: {valor_com_folga} R$
+VALOR: {(latas_18 * 80) + (galao_3_6 * 25)}
 
 ''')
