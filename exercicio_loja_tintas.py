@@ -39,17 +39,34 @@ VALOR TOTAL: R$ {valor:.2f}
 #cálculo para latas necessárias e valor de custo utilizando latas de 3.6 litros
 litros_necessários = metragem / 6
 
-latas = (litros_necessários // 3.6) + 1
+galao = (litros_necessários // 3.6) + 1
 
 if litros_necessários % 3.6 == 0:
-    latas = latas
-valor = latas * 25
-
+    galao = galao
+    valor = galao * 25
+else:
+    galao = galao + 1
+    valor = galao * 25
 print(f'''
 ORÇAMENTO PARA LATAS DE 3.6L
 METRAGEM: {metragem} mt²
 LITROS NECESSÁRIOS: {litros_necessários:.2f} litros
-LATAS: {int(latas)} un
+LATAS: {int(galao)} un
 VALOR TOTAL: R$ {valor:.2f}
 ''')
 
+#cálculo para latas necessárias e valor de custo utilizando latas mistas
+latas_18 = metragem // 108
+metragem_restante = metragem%108
+galao_3_6 = metragem_restante // 21.6
+if metragem_restante % 21.6 != 0:
+    galao_3_6 = galao_3_6 + 1
+
+
+print(f'''
+METRAGEM: {metragem} mt²
+QUANTIDADE DE LATAS DE 18L: {latas_18} un
+QUANTIDADE DE LATAS DE 3.6L: {galao_3_6} un
+VALOR: {(latas_18 * 80)+(galao_3_6 * 25)}
+
+''')
