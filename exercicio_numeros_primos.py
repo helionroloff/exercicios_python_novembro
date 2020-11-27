@@ -1,5 +1,8 @@
 #Faça um programa que gera uma lista dos números primos existentes entre 1 e 
-# um número inteiro informado pelo usuário. 
+# um número inteiro informado pelo usuário.
+
+# uma dica legal seria usar o type hinting
+# e essa serve para mim também hahah, tenho me esforçado pra virar um hábito
 def numeros_primos(intervalo):
     numeros_primos = []
     for i in range(1,numero + 1):
@@ -21,6 +24,3 @@ if __name__ == "__main__":
         if nova_consulta == 'N':
             print('OBRIGADO')
             break
-    
-
-
