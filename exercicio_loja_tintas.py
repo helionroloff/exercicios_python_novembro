@@ -14,12 +14,17 @@
 
 metragem = float(input('INFORME QUANTOS MT² POSSUI A ÁREA A SER PINTADA: '))
 
+# seria legal dar uma separada nas tarefas em funções
+# outra ponto seria colocar os valores fixos, como quantidade de litros de uma lata ou galão, tal como seu preço, em variáveis já no início do programa
+# assim se o valor ou a capacidade sofresse alguma alteração você só precisaria alterar em um lugar
+
 
 #cálculo para latas necessárias e valor de custo utilizando latas de 18 litros
 litros_necessários = metragem / 6
 
 latas = (litros_necessários // 18)
 
+# aqui ao invés de usar if else, você poderia ter usado apenas if not litros_necessários % 18 == 0: latas += 1, mas é isso ai ;)
 if litros_necessários % 18 == 0:
     latas = latas
 else:
@@ -34,6 +39,9 @@ LATAS: {int(latas)} un
 VALOR TOTAL: R$ {valor:.2f}
 ''')
 
+# note que o processo para calcular o orçamentos para latas e galões é o mesmo e o print essencialmente também
+# então, você poderia fazer uma função para calcular orçamento, que recebe por ex, 
+# os litros necessários, a quantidade de litros da lata ou galão (3.6 ou 18) e o seu respectivo valor
 
 
 #cálculo para latas necessárias e valor de custo utilizando latas de 3.6 litros

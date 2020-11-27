@@ -3,6 +3,9 @@
 #     quantos espaços em branco existem na frase.
 #     quantas vezes aparecem as vogais a, e, i, o, u. 
 def contador_vogais_espacos(frase):
+    # acho que seria interessantante adicionar algum método para ele contar as vogais com acentos, eu usei o modulo inicodedata, 
+    # então fica a dica ;)
+    # outro ponto é que você esqueceu de colocar as vogais no count() e colocou a, b, c, d,e (acontece com os melhores hahah)
     frase = frase.lower()
     print(f'''
     FRASE: {frase}
