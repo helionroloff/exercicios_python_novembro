@@ -13,6 +13,7 @@ def numeros_primos(intervalo):
 
 
 if __name__ == "__main__":
+    
     while True:
         numero = int(input('números primos no intervalo de 1 a: '))
         resultado = numeros_primos(numero)
